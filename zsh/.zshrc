@@ -12,7 +12,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 fpath=(/usr/local/share/zsh-completions $fpath)
-
+cdpath=(~ ~/src)
 alias gst='git status'
 alias gco='git checkout'
 
