@@ -17,3 +17,5 @@ alias gst='git status'
 alias gco='git checkout'
 
 bindkey -M viins 'jj' vi-cmd-mode
+
+export PROMPT='%c%# '
