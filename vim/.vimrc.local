@@ -1,0 +1,21 @@
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+
+set wildignore+=*/target/*,*.class
+
+let g:spf13_no_autochdir=1
+
+inoremap jj <Esc>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
+UnBundle 'AutoClose'
+
+set shortmess+=I
