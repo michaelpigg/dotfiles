@@ -1,0 +1,3 @@
+#compdef gcl
+
+_arguments ":clone repo:_urls"

@@ -1,3 +1,5 @@
+fpath=(/usr/local/share/zsh-completions ~/dotfiles/zsh/completion $fpath)
+path=(~/dotfiles/bin $path)
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -11,7 +13,6 @@ zstyle :compinstall filename '/Users/michaelpigg/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-fpath=(/usr/local/share/zsh-completions $fpath)
 cdpath=(~ ~/src)
 alias gst='git status'
 alias gco='git checkout'
@@ -19,3 +20,7 @@ alias gco='git checkout'
 bindkey -M viins 'jj' vi-cmd-mode
 
 export PROMPT='%c%# '
+
+zstyle ":completion:*:descriptions" format "%B%d%b"
+
+gcl() git clone "$@"
