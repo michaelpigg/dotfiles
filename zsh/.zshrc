@@ -24,3 +24,7 @@ export PROMPT='%c%# '
 zstyle ":completion:*:descriptions" format "%B%d%b"
 
 gcl() git clone "$@"
+
+if [[ -e ~/.localrc ]] then
+    source ~/.localrc
+fi
