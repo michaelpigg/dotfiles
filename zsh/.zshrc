@@ -1,10 +1,10 @@
 fpath=(/usr/local/share/zsh-completions ~/dotfiles/zsh/completion $fpath)
-path=(~/dotfiles/bin $path)
+path=(/usr/local/share/npm/bin ~/dotfiles/bin $path)
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd
+setopt appendhistory autocd correct
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
