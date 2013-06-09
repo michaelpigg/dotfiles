@@ -5,7 +5,6 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd correct
-bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/michaelpigg/.zshrc'
@@ -17,7 +16,10 @@ cdpath=(~ ~/src)
 alias gst='git status'
 alias gco='git checkout'
 
+bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
 
 export PROMPT='%c%# '
 
