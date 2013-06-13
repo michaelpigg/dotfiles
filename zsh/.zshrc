@@ -27,6 +27,8 @@ zstyle ":completion:*:descriptions" format "%B%d%b"
 
 gcl() git clone "$@"
 
+. ~/dotfiles/zsh/git.zsh
+
 if [[ -e ~/.localrc ]] then
     source ~/.localrc
 fi
