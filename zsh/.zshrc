@@ -26,6 +26,7 @@ export PROMPT='%c%# '
 zstyle ":completion:*:descriptions" format "%B%d%b"
 
 gcl() git clone "$@"
+GCL_URLS=(https://github.com/ https://bitbucket.org/)
 
 . ~/dotfiles/zsh/git.zsh
 
