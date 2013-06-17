@@ -9,6 +9,9 @@ setopt appendhistory autocd correct
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/michaelpigg/.zshrc'
 
+zmodload zsh/complist
+zstyle ':completion*:default' menu 'select=0'
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -24,6 +27,7 @@ bindkey '^[[B' down-line-or-search
 export PROMPT='%c%# '
 
 zstyle ":completion:*:descriptions" format "%B%d%b"
+zstyle ':completion:*' group-name ''
 
 gcl() git clone "$@"
 GCL_URLS=(https://github.com/ https://bitbucket.org/)
