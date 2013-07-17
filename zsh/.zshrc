@@ -30,7 +30,7 @@ zstyle ":completion:*:descriptions" format "%B%d%b"
 zstyle ':completion:*' group-name ''
 
 gcl() git clone "$@"
-GCL_URLS=(https://github.com/ https://bitbucket.org/)
+GCL_URLS=(https://github.com/ https://bitbucket.org/ https://code.google.com/p/)
 
 . ~/dotfiles/zsh/git.zsh
 
