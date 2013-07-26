@@ -1,0 +1,11 @@
+#compdef srp
+function _srp_tasks {
+if [[ -e sbt-project-list ]]; then
+    compadd $(cat sbt-project-list)
+else
+    sbt -Dsbt.log.noformat=true projects | awk -F '\t' '/^\[info\].\t / {print substr($2, 4, length($2) - 3)}' - > sbt-project-list
+    compadd $(cat sbt-project-list)
+fi
+}
+_arguments "*:task:_srp_tasks"
+return 0
