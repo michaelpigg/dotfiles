@@ -1,5 +1,5 @@
-#compdef srp
-function _srp_tasks {
+#compdef srp sbp
+function _sbt_projects {
 if [[ -e sbt-project-list ]]; then
     compadd $(cat sbt-project-list)
 else
@@ -7,5 +7,8 @@ else
     compadd $(cat sbt-project-list)
 fi
 }
-_arguments "*:task:_srp_tasks"
-return 0
+function _srp {
+  _arguments "*:task:_sbt_projects"
+  return 0
+}
+_srp "$@"

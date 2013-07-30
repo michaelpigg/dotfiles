@@ -33,6 +33,7 @@ gcl() git clone "$@"
 GCL_URLS=(https://github.com/ https://bitbucket.org/ https://code.google.com/p/)
 
 . ~/dotfiles/zsh/git.zsh
+. ~/dotfiles/sbt/sbt.zsh
 
 path=(~/dotfiles/bin $path)
 if [[ -e ~/.localrc ]] then
