@@ -1,5 +1,5 @@
 #compdef srp sbp
-function _sbt_projects {
+_sbt_projects () {
 if [[ -e sbt-project-list ]]; then
     compadd $(cat sbt-project-list)
 else
@@ -7,8 +7,16 @@ else
     compadd $(cat sbt-project-list)
 fi
 }
-function _srp {
-  _arguments "*:task:_sbt_projects"
+_sbt_tasks () {
+  compadd -X "sbt tasks" clean compile console run test it:test
+}
+
+_srp () {
+  if (( CURRENT > 2 )); then
+    _sbt_tasks
+  else
+    _arguments "*:task:_sbt_projects"
+  fi
   return 0
 }
 _srp "$@"
