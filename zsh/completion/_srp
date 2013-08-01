@@ -1,5 +1,8 @@
 #compdef srp sbp
 _sbt_projects () {
+if [[ ! -e build.sbt ]]; then
+    return
+fi
 if [[ -e sbt-project-list ]]; then
     compadd $(cat sbt-project-list)
 else
