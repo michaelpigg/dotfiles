@@ -6,6 +6,7 @@ fi
 if [[ -e sbt-project-list ]]; then
     compadd $(cat sbt-project-list)
 else
+    echo "\nBuilding sbt project list ...."
     sbt -Dsbt.log.noformat=true projects | awk -F '\t' '/^\[info\].\t / {print substr($2, 4, length($2) - 3)}' - > sbt-project-list
     compadd $(cat sbt-project-list)
 fi
