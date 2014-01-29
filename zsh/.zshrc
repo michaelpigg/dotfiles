@@ -15,9 +15,10 @@ zstyle ':completion*:default' menu 'select=0'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-cdpath=(~ ~/src)
+cdpath=(~ ~/projects)
 alias gst='git status'
 alias gco='git checkout'
+alias vim='mvim'
 
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
